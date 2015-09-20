@@ -1,0 +1,36 @@
+{
+  "name": "my-node-rest-mongoose",
+  "version": "1.0.0",
+  "description": "Node REST Mongo Db",
+  "keywords": [
+    "express",
+    "Node.js",
+    "underscore",
+    "mongoose"
+  ],
+  "author": {
+    "name": "Tom Mac",
+    "email": "",
+    "url":  ""
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {
+    "express": "4.6.1",
+    "mongoose": "4.0.6",
+    "underscore": "1.6.0",
+    "body-parser": "1.4.3"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "license": "MIT",
+  "main": "server.js"
+}
+

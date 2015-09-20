@@ -1,0 +1,6 @@
+TODO:
+
+1. Externalize routes
+2. Connect to Mongo Db
+3. Models
+4. Controllers
