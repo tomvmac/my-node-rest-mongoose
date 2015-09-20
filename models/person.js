@@ -22,9 +22,7 @@ var personSchema = new Schema({
   sex: String
 });
 
-// the schema is useless so far
-// we need to create a model using it
-//var Person = mongoose.model('Person', personSchema, 'person');  // This is only required to use singular document names
-var Person = mongoose.model('Person', personSchema, 'person');
+// Create a person model from schema
+var person = mongoose.model('person', personSchema, 'person');
 
-module.exports = Person;
+module.exports = person;

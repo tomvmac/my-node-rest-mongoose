@@ -20,8 +20,11 @@ var express = require("express")
   , bodyParser = require("body-parser")
   , mongoose = require("mongoose")
   , _ = require("underscore")
-  , Person = require("./models/person");
-  
+  , person = require("./models/person");  
+
+
+//Specify where the static content is
+app.use(express.static("public", __dirname + "/public"));
 
 /* Server config */
 //Server's IP address
@@ -41,9 +44,8 @@ app.use(express.static("public", __dirname + "/public"));
 app.use(bodyParser.json());
 
 
-
 /* Server routing */
-var routes = require('./routes')(app, Person); 
+var routes = require('./routes')(app, person); 
 
 
 //Start the http server at port and IP defined before
