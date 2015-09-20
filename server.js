@@ -19,7 +19,8 @@ var express = require("express")
   , http = require("http").createServer(app)
   , bodyParser = require("body-parser")
   , mongoose = require("mongoose")
-  , _ = require("underscore");
+  , _ = require("underscore")
+  , Person = require("./models/person");
   
 
 /* Server config */
@@ -42,8 +43,7 @@ app.use(bodyParser.json());
 
 
 /* Server routing */
-var routes = require('./routes')(app); 
-
+var routes = require('./routes')(app, Person); 
 
 
 //Start the http server at port and IP defined before

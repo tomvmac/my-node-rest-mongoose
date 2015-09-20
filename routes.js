@@ -1,4 +1,4 @@
-module.exports = function(app) {
+module.exports = function(app, Person) {
  
     function processName(request){
    var responseName = {
@@ -24,6 +24,27 @@ module.exports = function(app) {
 
       //Render the view called "index"
       response.send("index");
+
+    });
+
+    app.get("/person", function(request, response) {
+
+        // get all the person
+        Person.find({}, function(err, persons) {
+          if (err) {
+              console.log(err);
+              throw err;
+          }
+
+          // object of all the users
+          console.log(persons);
+            
+         //Render the view called "index"
+            //         response.send("Persons: " + responseName.firstName + " " + responseName.lastName);
+         response.json(200, persons);    
+        });
+
+        
 
     });
 
