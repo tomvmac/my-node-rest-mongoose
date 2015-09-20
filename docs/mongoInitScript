@@ -1,0 +1,32 @@
+// mongodb script
+
+db.person.insert(
+   {
+     personId: 1,
+     firstName: "Tom",
+     lastName: "Mac",
+     age: 40,
+     sex: "Male"
+   }
+)
+
+db.person.insert(
+   {
+     personId: 2,
+     firstName: "Brenton",
+     lastName: "Mac",
+     age: 10,
+     sex: "Male"
+   }
+)
+
+db.person.insert(
+    {
+     personId: 3,
+     firstName: "Candice",
+     lastName: "Mac",
+     age: 12,
+     sex: "Female"
+   }
+)
+
