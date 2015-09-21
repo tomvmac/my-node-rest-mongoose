@@ -1,14 +1,20 @@
 var mongoose = require('mongoose'),
-    Person = mongoose.model('Person');
-
-var Person = require("./models/person");
+    person = mongoose.model('person');
 
 
-var PersonController : 
-    function findAll(){
-        
+exports.list = function(req, res) {
+    // find all person
+    person.find({}, function(err, persons) {
+      if (err) {
+          return res.status(400).send({
+            message: "Unexpected error"
+            });
+      }
+      else {
+          // object of all the users
+          console.log(persons);
+         res.json(200, persons);    
+      }
+    });
+};
 
-    }
-
-
-module.exports = PersonController;

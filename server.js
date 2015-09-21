@@ -20,7 +20,8 @@ var express = require("express")
   , bodyParser = require("body-parser")
   , mongoose = require("mongoose")
   , _ = require("underscore")
-  , person = require("./models/person");  
+  , person = require("./models/person")
+  , personController = require("./controllers/personController");  
 
 
 //Specify where the static content is
@@ -45,7 +46,7 @@ app.use(bodyParser.json());
 
 
 /* Server routing */
-var routes = require('./routes')(app, person); 
+var routes = require('./routes')(app, person, personController); 
 
 
 //Start the http server at port and IP defined before
