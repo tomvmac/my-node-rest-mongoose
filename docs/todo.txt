@@ -1,6 +1,7 @@
 TODO:
 
-1. Externalize routes  // completed, maybe use multiple routes in the future
-2. Connect to Mongo Db // completed
-3. Models
-4. Controllers  //https://masteringmean.com/lessons/203-Creating-a-MEAN-CRUD-Module-Part-1
+1. Implement CRUD methods:
+   a. Find By Id, Find By Field (Generic)
+   b. Save (Create and Update)
+   c. Delete
+   

@@ -9,12 +9,23 @@ module.exports = function(app, personModel, personController) {
     });
 
 
+    // All persons
     app.get("/api/person", function(request, response) {
 
         // get all the person
         personController.list(request, response);        
 
     });
+    
+    
+    // Person by firstname
+    app.get("/api/person/firstName/:firstName", function(request, response) {
+        console.log("firstName is set to " + request.param("firstName"));   
+        personController.findByFirstName(request, response, request.param("firstName"));
+            
+    });
+    
+    
 
     
 }
