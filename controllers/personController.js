@@ -1,10 +1,10 @@
 var mongoose = require('mongoose'),
-    person = mongoose.model('person');
+    personModel = mongoose.model('personModel');
 
 
 exports.list = function(req, res) {
     // find all person
-    person.find({}, function(err, persons) {
+    personModel.find({}, function(err, persons) {
       if (err) {
           return res.status(400).send({
             message: "Unexpected error"
@@ -16,5 +16,7 @@ exports.list = function(req, res) {
          res.json(200, persons);    
       }
     });
+    
+
 };
 

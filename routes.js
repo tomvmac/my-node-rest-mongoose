@@ -1,4 +1,4 @@
-module.exports = function(app, person, personController) {
+module.exports = function(app, personModel, personController) {
      
     //Handle route "GET /", as in "http://localhost:8080/"
     app.get("/", function(request, response) {
