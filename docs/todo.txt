@@ -1,7 +1,7 @@
 TODO:
 
 1. Implement CRUD methods:
-   a. Find By Id, Find By Field (Generic)
-   b. Save (Create and Update)
+   a. Find By Field (Generic)
+   b. On Create - prevent duplicate names 
    c. Delete
    

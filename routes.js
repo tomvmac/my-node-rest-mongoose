@@ -35,20 +35,22 @@ module.exports = function(app, personModel, personController) {
     
     app.post("/api/person", function(request, response) {
         console.log(request.body);
-//        console.log("req.body.id to update = " + request.body._id);
-//         
-//        if (request.body._id != null){
-//            // update existing record
-//            personController.update(request, response);
-//        } else {
-//           // create new record   
-//           personController.create(request, response);    
-//        }
-        personController.save(request, response);
+        console.log("req.body.id to update = " + request.body._id);
+         
+        personController.create(request, response);
         
     });
 
+    
+    app.put("/api/person/:id", function(request, response) {
+        console.log(request.body);
+        console.log("id to update = " + request.params.id);
 
+        personController.update(request, response, request.params.id);
+        
+    });
+
+    
     
 }
 
