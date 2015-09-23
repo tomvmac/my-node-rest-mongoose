@@ -19,7 +19,7 @@ var personSchema = new Schema({
   firstName: String,
   lastName: String,
   age: Number,    
-  sex: String
+  sex: String   
 });
 
 // Create a person model from schema
