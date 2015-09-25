@@ -50,6 +50,12 @@ module.exports = function(app, personModel, personController) {
         
     });
 
+    app.delete("/api/person/:id", function(request, response) {
+        console.log("id to delete = " + request.params.id);
+
+        personController.delete(request, response, request.params.id);
+        
+    });
     
     
 }

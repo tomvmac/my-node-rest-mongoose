@@ -95,3 +95,30 @@ exports.update = function(req, res, id) {
 };
 
 
+// find and delete
+exports.delete = function(req, res, id) {
+    personModel.findById(id, function(err, person) {
+        // Handle the error using the Express error middleware
+        if (err) {
+          return res.status(400).send({
+            message: "Unexpected error"
+            });
+        }
+
+        // Render not found error
+        if(!person) {
+          return res.status(404).json({
+            message: 'Person with id ' + id + ' can not be found.'
+          });
+        }
+
+        // Update the course model
+        person.remove(function(error) {
+          if(error) return next(error);
+
+          res.json('Person successfully deleted.');
+        });
+      });
+
+};
+

@@ -23,6 +23,10 @@ Getting Started:
 2. node server.js or nodemon server.js (if you have nodemon installed so you can change server.js without restarting)
 3. http://localhost:8080
 
+-------------------------------------------------------------------------------
 
 
 
+Additional Resources:
+
+https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications
