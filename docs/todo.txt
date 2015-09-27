@@ -1,7 +1,5 @@
 TODO:
 
-1. Implement CRUD methods:
-   a. Find By Field (Generic)
-   b. On Create - prevent duplicate names 
-   c. Delete
-   
+Angular:
+
+1. Refactor to structure angular.
