@@ -2,4 +2,7 @@ TODO:
 
 Angular:
 
-1. Refactor to structure angular.
+1. Refactor modules (app, controller)
+2. Routing
+
+

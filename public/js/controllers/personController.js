@@ -1,6 +1,4 @@
-var mainApp = angular.module("mainApp", []);
-
-mainApp.controller("personController", function ($scope, $http) {
+mainApp.controller("personController", function ($scope, $http, $location) {
 
     // Methods
 
@@ -25,6 +23,11 @@ mainApp.controller("personController", function ($scope, $http) {
             $scope.getPersons();
         });
 
+    };
+
+    // createPerson
+    $scope.createPerson = function () {
+        $location.path('/user-creation');
     };
 
 
