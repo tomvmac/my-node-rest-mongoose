@@ -1,6 +1,7 @@
 <!-- public/index.html -->
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <base href="/">
@@ -9,48 +10,59 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- custom styles -->
 
     <!-- JS -->
-    <script src = "libs/angular/angular.min.js"></script>
-<!--    <script src="js/mainApp.js"></script>-->
+    <script src="libs/angular/angular.min.js"></script>
+    <!--    <script src="js/mainApp.js"></script>-->
     <script src="js/controllers/personController.js"></script>
-    
+
 
 </head>
-   <body>
-      <h2>Persons Page</h2>
-      <div ng-app = "mainApp" ng-controller = "personController">
-      
-         <div>
-               <h3>Filter Persons</h3>
-               <p>
-               FirstName: <input type="text" ng-model="firstNameFilter">
-               </p>
-               <p>
-               LastName: <input type="text" ng-model="lastNameFilter">
-               </p>   
-         </div>   
-         <br/>
 
-         <table>
+<body>
+    <h2>Persons Page</h2>
+    <div ng-app="mainApp" ng-controller="personController">
+
+        <a ng-click="createNewUser()" class="btn btn-small">Create New Person</a>
+
+        <div>
+            <h3>Filter Persons</h3>
+            <p>
+                FirstName:
+                <input type="text" ng-model="firstNameFilter">
+            </p>
+            <p>
+                LastName:
+                <input type="text" ng-model="lastNameFilter">
+            </p>
+        </div>
+        <br/>
+
+        <table>
             <tr>
-               <th>First Name</th>
-               <th>Last Name</th>
-               <th>Age</th>
-               <th>Sex</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+                <th></th>
+                <td></td>
             </tr>
-         
-            <tr ng-repeat = "person in persons  | filter: firstNameFilter | filter:lastNameFilter |orderBy:'firstName'">
-               <td>{{ person.firstName }}</td>
-               <td>{{ person.lastName }}</td>
-               <td>{{ person.age }}</td>
-               <td>{{ person.sex }}</td>
+
+            <tr ng-repeat="person in persons  | filter: firstNameFilter | filter:lastNameFilter |orderBy:'firstName'">
+                <td>{{ person.firstName }}</td>
+                <td>{{ person.lastName }}</td>
+                <td>{{ person.age }}</td>
+                <td>{{ person.sex }}</td>
+                <td><a ng-click="editPerson(person._id)">edit</a></td>
+                <td><a ng-click="deletePerson(person._id)">delete</a></td>
             </tr>
-         </table>
-      </div>
-              
-       
-       
-   </body>
+        </table>
+    </div>
+
+
+
+</body>
+
 </html>
