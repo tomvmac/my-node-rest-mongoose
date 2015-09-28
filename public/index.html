@@ -12,12 +12,15 @@
     <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
 
     <!-- JS -->
-      <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+    <script src = "libs/angular/angular.min.js"></script>
+<!--    <script src="js/mainApp.js"></script>-->
+    <script src="js/controllers/personController.js"></script>
+    
 
 </head>
    <body>
       <h2>Persons Page</h2>
-      <div ng-app = "" ng-controller = "personController">
+      <div ng-app = "mainApp" ng-controller = "personController">
       
          <div>
                <h3>Filter Persons</h3>
@@ -46,16 +49,8 @@
             </tr>
          </table>
       </div>
-      
-      <script>
-         function personController($scope,$http) {
-            var url = "/api/person";
-         
-            $http.get(url).success( function(response) {
-               $scope.persons = response;
-            });
-         }
-      </script>
-            
+              
+       
+       
    </body>
 </html>
