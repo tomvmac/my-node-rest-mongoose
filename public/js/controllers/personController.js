@@ -25,11 +25,10 @@ mainApp.controller("personController", function ($scope, $http, $location) {
 
     };
 
-    // createPerson
-    $scope.createPerson = function () {
-        $location.path('/user-creation');
+    // editPerson
+    $scope.editPerson = function (id) {
+        $location.path('/editPerson');
     };
-
 
 
     // Init

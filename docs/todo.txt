@@ -2,7 +2,9 @@ TODO:
 
 Angular:
 
-1. Refactor modules (app, controller)
-2. Routing
+1.  Routing - http://viralpatel.net/blogs/angularjs-routing-and-views-tutorial-with-example/
 
+2. bootstrap styling
+
+3. real time socket io
 
