@@ -42,7 +42,7 @@ module.exports = function(app, personModel, personController) {
     });
 
     
-    app.put("/api/person/:id", function(request, response) {
+    app.put("/api/person/id/:id", function(request, response) {
         console.log(request.body);
         console.log("id to update = " + request.params.id);
 

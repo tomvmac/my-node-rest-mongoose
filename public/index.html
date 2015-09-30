@@ -14,32 +14,31 @@
     <!-- custom styles -->
 
     <!-- JS -->
+    
+    <!-- Angular Libs -->
     <script src="libs/angular/angular.min.js"></script>
     <script src="libs/angular-route/angular-route.min.js"></script>
 
-    
-    
+    <!-- Person App Libs -->
     <script src="js/mainApp.js"></script>
-    <script src="js/controllers/personController.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/controllers/listPersonController.js"></script>
+    <script src="js/controllers/createPersonController.js"></script>
+    <script src="js/controllers/updatePersonController.js"></script>
 
 
 </head>
 
 <body>
-    <h2>Persons Page</h2>
-    <div ng-app="mainApp" ng-controller="personController">
+    <h2>Welcome the Persons App</h2>
+    <p></p>
+    <div ng-app="mainApp" ng-controller="listPersonController">
 
-      <ul class="menu">
-        <li><a href="#/listPersons">List Persons</a></li>
-        <li><a href="#/user-detail/1">user-detail/1</a></li>
-        <li><a href="#/createPerson">Create Person</a></li>
-      </ul>
+        <!-- Add your site or application content here -->
+        <div class="container" ng-view=""></div>
 
-      <!-- Add your site or application content here -->
-      <div class="container" ng-view=""></div>
-        
-        
-        
+
+
     </div>
 
 

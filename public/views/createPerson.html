@@ -1,0 +1,46 @@
+<div class="container">
+    <h1>Create new person</h1>
+
+    <form novalidate="novalidate" class="form-horizontal">
+        <!-- firstName -->
+        <div class="control-group">
+            <label class="control-label" for="inputFirstName">First name:</label>
+
+            <div class="controls">
+                <input type="text" id="inputFirstName" ng-model="person.firstName" placeholder="First name" />
+            </div>
+        </div>
+        <!-- lastName -->
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">Last name:</label>
+
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="person.lastName" placeholder="Last name" />
+            </div>
+        </div>
+        <!-- age -->
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">Age:</label>
+
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="person.age" placeholder="Age" />
+            </div>
+        </div>
+        <!-- sex -->
+        <div class="control-group">
+            <label class="control-label" for="inputLastName">Sex:</label>
+
+            <div class="controls">
+                <input type="text" id="inputLastName" ng-model="person.sex" placeholder="Sex" />
+            </div>
+        </div>
+
+
+        <div class="control-group">
+            <div class="controls">
+                <a ng-click="createPerson()" class="btn btn-small btn-primary">create person</a>
+                <a ng-click="cancel()" class="btn btn-small">cancel</a>
+            </div>
+        </div>
+    </form>
+</div>
